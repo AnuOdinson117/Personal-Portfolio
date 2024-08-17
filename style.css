@@ -1,23 +1,57 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: monospace;
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    width: 14px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #121212; 
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff005199; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff004f; 
+}
+
 span {
-    color: orangered;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #ff004f;
+    font-family: monospace;
 }
 
 body {
-    background: #191919;
+    background: #000;
     color: #fff;
 }
 
 #header {
     width: 100%;
     height: 100vh;
+    background-image: url(snapedit_1723920281598.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 40px;
+}
+
+.header-text h1 span {
+    color: #ff004f;
 }
 
 .container {
@@ -32,9 +66,9 @@ nav {
 }
 
 .logo {
-    font-size: 30px;
+    font-size: 45px;
     font-weight: bolder;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: monospace;
     text-align: center;
 }
 
@@ -47,7 +81,7 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
     position: relative;
 }
 
@@ -55,7 +89,7 @@ nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: orangered;
+    background: #ff004f;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -68,14 +102,14 @@ nav ul li a:hover::after {
 
 .sub-title {
     font-size: 50px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: monospace;
     text-align: center;
     margin: 50px 0 100px 0;
 }
 
 /* SKILLS SECTION */
 
-#skills {
+#domains {
     padding: 30px 0;
 }
 
@@ -116,12 +150,12 @@ nav ul li a:hover::after {
 }
 
 .skills-list div:hover {
-    background: orangered;
+    background: #ff004f;
     transform: translateY(-15px);
     cursor: pointer;
 }
 
-#portfolio {
+#projects {
     padding: 50px 0;
 }
 
@@ -147,7 +181,7 @@ nav ul li a:hover::after {
 .layer {
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6), orangered);
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -170,7 +204,15 @@ nav ul li a:hover::after {
 
 .layer a {
     text-decoration: none;
-    color: #fff;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
     margin-top: 30px;
 }
 
@@ -180,4 +222,61 @@ nav ul li a:hover::after {
 
 .work:hover .layer {
     height: 100%;
+}
+
+.row {
+    margin: 100px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.row i {
+    font-size: 60px;
+    transition: transform 0.5s;
+}
+
+.row div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.row a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    transition: transform 0.5s;
+}
+
+.row i:hover {
+    transform: translateY(-20px);
+}
+.row a:hover {
+    color: #ff004f;
+}
+
+#contact {
+    padding: 50px 0 150px 0;
+}
+
+footer {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+}
+
+footer i {
+    color: #ff004f;
+}
+
+@media only screen and (max-width: 600px) {
+    .row {
+        display: block;
+    }
 }
